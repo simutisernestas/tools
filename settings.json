@@ -1,0 +1,20 @@
+{
+    "[cpp]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true,
+    },
+
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "TODO:",
+            "color": "#FF00CD",
+            "border": "1px solid #FF00CD",
+            "borderRadius": "3px",
+            "backgroundColor": "rgba(0,0,0,.2)",
+            //other styling properties goes here ... 
+        }
+    ],
+}
