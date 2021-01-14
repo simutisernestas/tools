@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      /* Configuration for the STM32F303 Discovery board */
+      "type": "cortex-debug",
+      "request": "launch", // attach
+      "name": "Debug (OpenOCD)",
+      "servertype": "openocd",
+      "cwd": "${workspaceRoot}",
+      // "preLaunchTask": "Cargo Build (debug)",
+      "runToMain": true,
+      "executable": "${workspaceRoot}/build/Blink.ino.elf",
+      "device": "STM32F103C8",
+      "configFiles": [
+        "interface/stlink-v2-1.cfg",
+        "target/stm32f1x.cfg"
+      ],
+      "showDevDebugOutput": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      "svdFile": "${workspaceRoot}/.vscode/STM32F103xx.svd",
+      "swoConfig": {
+        "enabled": true,
+        "source": "probe",
+        "swoFrequency": 2000000,
+        "cpuFrequency": 72000000,
+        "decoders": [
+          {
+            "port": 1,
+            "type": "console",
+            "label": "SWO output",
+            "encoding": "ascii"
+          }
+        ]
+      }
+    }
+  ]
+}
